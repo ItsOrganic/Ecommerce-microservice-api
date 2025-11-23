@@ -1,0 +1,72 @@
+output:
+lll:
+line-length: 120
+tab-width: 1
+unparam:
+check-exported: false
+unused:
+check-exported: false
+whitespace:
+multi-if: false
+multi-func: false
+wsl:
+strict-append: true
+allow-assign-and-call: true
+allow-multiline-assign: true
+allow-cuddle-declarations: false
+allow-trailing-comment: false
+force-case-trailing-whitespace: 0
+force-err-cuddling: false
+allow-separated-leading-comment: false
+gosec:
+includes:
+- G301
+- G302
+- G401
+- G403
+- G404
+excludes:
+- G201
+maligned:
+suggest-new: true
+
+
+linters:
+disable-all: true
+enable:
+- bodyclose
+- dogsled
+- funlen
+- gochecknoinits
+- goconst
+- gofmt
+- godox
+- gomnd
+- goprintffuncname
+- gosec
+- lll
+- nestif
+- noctx
+- typecheck
+- unconvert
+- unparam
+- unused
+- whitespace
+- maligned
+```yaml
+run:
+timeout: 5m
+linters:
+enable:
+- govet
+- staticcheck
+- gofumpt
+- goimports
+- revive
+- errcheck
+- ineffassign
+- gocyclo
+
+
+issues:
+exclude-use-default: false
